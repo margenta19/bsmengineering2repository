@@ -1,4 +1,3 @@
-#!/usr/bin/python
 import RoboPiLib as RoboPi
 import time as time
 import motor_instructions as motors
@@ -23,7 +22,7 @@ def counterclockwise():
     print "Counter Clockwise"
 def stop():
     motors.stop()
-    print "Alto"
+    print "Stop"
 def wall_left():
     motors.wall_left()
     print "wall_left"
