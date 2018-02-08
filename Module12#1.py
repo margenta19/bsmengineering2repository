@@ -6,8 +6,9 @@
 
 #script to make i the sensor must come before
 
-i = sensor_pin
 sensor_pin = 16
+i = sensor_pin
+
 RPL.pinMode(sensor_pin,RPL.INPUT)
 
 while i < 0:
