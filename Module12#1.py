@@ -5,8 +5,6 @@
 #if there is enough information there to make a while loop
 
 #script to make i the sensor must come before
-from setup import RPL
-import post_to_web as PTW # see post_to_web.py for instructions
 
 i = sensor_pin
 sensor_pin = 16
