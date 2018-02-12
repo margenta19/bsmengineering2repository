@@ -1,6 +1,6 @@
 import RoboPiLib as RoboPi
 import time as time
-import motor_instructions as motors
+import motors as motors
 
 #INPUT = RoboPi.INPUT
 
