@@ -22,32 +22,22 @@ RoboPi.pinMode (down_servo, servo)
 def go_forward():
     RoboPi.servoWrite(left_servo, 500)
     RoboPi.servoWrite(right_servo, 2500)
-    RoboPi.servoWrite(up_servo, 2500)
-    RoboPi.servoWrite(down_servo, 500)
 
 def go_backward():
     RoboPi.servoWrite(left_servo, 2500)
     RoboPi.servoWrite(right_servo, 500)
-    RoboPi.servoWrite(up_servo, 500)
-    RoboPi.servoWrite(down_servo, 2500)
 
 def spin_counterclockwise():
     RoboPi.servoWrite(left_servo, 2500)
     RoboPi.servoWrite(right_servo, 2500)
-    RoboPi.servoWrite(up_servo, 2500)
-    RoboPi.servoWrite(down_servo, 2500)
 
 def spin_clockwise():
     RoboPi.servoWrite(left_servo, 500)
     RoboPi.servoWrite(right_servo, 500)
-    RoboPi.servoWrite(up_servo, 500)
-    RoboPi.servoWrite(down_servo, 500)
 
 def stop():
     RoboPi.servoWrite(left_servo, 0)
     RoboPi.servoWrite(right_servo, 0)
-    RoboPi.servoWrite(up_servo, 0)
-    RoboPi.servoWrite(down_servo, 0)
 
 def wall_left():
     spin_clockwise()
