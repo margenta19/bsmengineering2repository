@@ -17,7 +17,7 @@ while True:
   PTW.state['d1'] = RPL.digitalRead(sensor_pin)
   PTW.post()
 
- if RPL.digitalRead(sensor_pin) == 1:
+if RPL.digitalRead(sensor_pin) == 1:
     RPL.servoWrite(0, 1000)
     print "on correct"
 
