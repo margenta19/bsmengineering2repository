@@ -6,18 +6,21 @@
 
 #script to make i the sensor must come before
 
-sensor_pin = 1
-i = sensor_pin
+import setup
+from setup import RPL
+import post_to_web as PTW # see post_to_web.py for instructions
 
+sensor_pin = 16
 RPL.pinMode(sensor_pin,RPL.INPUT)
-
-while i < 0:
-    RPL.servoWrite(0, 1000)
-    print "on correct"
-
-while i > 0:
-    RPL.servoWrite(0, 0)
-    print "off correct"
 
 while True:
   PTW.state['d1'] = RPL.digitalRead(sensor_pin)
+  PTW.post()
+
+ if RPL.digitalRead(sensor_pin) == 1:
+    RPL.servoWrite(0, 1000)
+    print "on correct"
+
+while RPL.digitalRead(sensor_pin) > 0:
+    RPL.servoWrite(0, 0)
+    print "off correct"
