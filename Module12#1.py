@@ -26,4 +26,3 @@ if RPL.digitalRead(sensor_pin) == 0:
     import RoboPiLib as RPL
     import setup
     RPL.servoWrite(0, 0)
-    
